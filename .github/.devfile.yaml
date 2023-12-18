@@ -1,0 +1,12 @@
+schemaVersion: 2.2.0
+metadata:
+  name: gitpod-vscode-desktop
+
+components:
+  - name: tools
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest
+      memoryRequest: 1G
+      memoryLimit: 4G
+      cpuRequest: '1'
+      cpuLimit: '2'
