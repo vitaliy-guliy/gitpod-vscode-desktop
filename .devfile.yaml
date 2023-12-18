@@ -10,3 +10,19 @@ components:
       memoryLimit: 4G
       cpuRequest: '1'
       cpuLimit: '2'
+
+commands:
+  - id: install-dependencies
+    exec:
+      label: "Install dependencies"
+      component: tools
+      commandLine: "yarn install --frozen-lockfile"
+
+  - id: build-vsix
+    exec:
+      label: "Build vsix binary"
+      component: tools
+      commandLine: "yarn package"
+      group:
+        kind: build
+        isDefault: false
